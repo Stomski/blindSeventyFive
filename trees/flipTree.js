@@ -31,3 +31,11 @@ The number of nodes in the tree is in the range [0, 100].
 
 
 */
+
+function invertBinTreeIterative(root) {
+  // i consider this one pretty straight forward
+}
+
+function invertBinTreeRecursive(root) {
+  //so honestly this is the one that for sure gives me trouble, so lets psudo code it out a bit.....
+}
