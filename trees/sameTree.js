@@ -54,12 +54,21 @@ Use stack/queue and use a tuple and then use a while loop to compare each node. 
 
 
 
-const isSameTree = (p, q) => {
-	let queue = []
-}
-
-
-
 as a study i want to attempt the above recursively
 
 */
+
+const isSameTree = (p, q) => {
+  let stack = [[p, q]];
+  while (stack.length) {
+    let [currA, currB] = stack.pop();
+    if (currA?.val !== currB?.val) return false;
+    if (currA?.left && currB?.left) {
+      stack.push([currA.left, currB.left]);
+    }
+    if (currA?.right && currB?.right) {
+      stack.push([currA.right, currB.right]);
+    }
+  }
+  return true;
+};
