@@ -29,6 +29,30 @@ again, iterative and recursive solutions exist
 
 
 
-
-
 */
+
+function binTreeDepthIterative(root) {
+  let stack = [[root, 1]];
+  let maxDepth = 0;
+  while (stack.length) {
+    let [currNode, currDepth] = stack.pop();
+    if (currDepth > maxDepth) maxDepth = currDepth;
+    if (currNode.left) {
+      stack.push([currNode.left, currDepth + 1]);
+    }
+
+    if (currNode.right) {
+      stack.push([currNode.right, currDepth + 1]);
+    }
+  }
+
+  return maxDepth;
+}
+
+function binTreeDepthRecursive(root) {
+  if (!root) return 0;
+
+  return (
+    max(binTreeDepthRecursive(root.left), binTreeDepthRecursive(root.right)) + 1
+  );
+}
