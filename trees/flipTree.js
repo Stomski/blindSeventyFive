@@ -34,6 +34,23 @@ The number of nodes in the tree is in the range [0, 100].
 
 function invertBinTreeIterative(root) {
   // i consider this one pretty straight forward
+  // in this attempt im going to switch as i go down the tree...... I wonder if this is a problem or sub optimal to switching as i go up?
+
+  let stack = [root];
+
+  while (stack.length) {
+    let currNode = stack.pop();
+
+    let oldLeft = currNode.left;
+    let oldRight = currNode.right;
+
+    if (currNode.left) stack.push(currNode.left);
+    if (currNode.right) stack.push(currNode.right);
+
+    currNode.right = oldLeft;
+    currNode.left = oldRight;
+  }
+  return root;
 }
 
 function invertBinTreeRecursive(root) {
