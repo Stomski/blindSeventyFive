@@ -30,6 +30,6 @@ spellcheck systems, priority cues (heaps) use trees under the hood as well
 
 BFS
 
-On
+O(n)
 
-Ok where width of the widest row of the tree
+O(k) where width of the widest row of the tree
