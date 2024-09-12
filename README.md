@@ -91,3 +91,5 @@ Review entire solution set so far
 Work through remainder of Blind 75 problems and update journal with approaches
 Review set a final time after completing all remaining problems
 Begin working through the Neetcode 150 and incorporating LC into your daily practice
+
+git commit testing from my surface project
