@@ -9,8 +9,6 @@ You are given an array people where people[i] is the weight of the ith person, a
 
 Return the minimum number of boats to carry every given person.
 
-
-
 Example 1:
 
 Input: people = [1,2], limit = 3
@@ -37,18 +35,19 @@ Constraints:
 1 <= people.length <= 5 * 104
 1 <= people[i] <= limit <= 3 * 104
 
-
-clarifying questions:
+//  clarifying questions:
 are the weights all integers?
 
-
-
-formulate the approach:
-
-ok, so start the pointers
+//  formulate the approach:
 
 while the array has length
 
 sliding in looking for the max and tracking closest(with the indices), if max not found, pair closest and remove
 
 */
+
+
+
+
+
+
