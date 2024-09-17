@@ -58,7 +58,6 @@ Initialize a right and left pointer to mark off our window and create a variable
 
 
 
-*/
 
 const maxProfit = (prices) => {
   let left = 0;
@@ -71,11 +70,13 @@ const maxProfit = (prices) => {
       left = right;
     } else {
       let profit = sellPrice - buyPrice;
-      maxProfitSoFar = Math.max(maxProfitSoFar, profit);
-    }
-    right++;
+    maxProfitSoFar = Math.max(maxProfitSoFar, profit);
   }
-  return maxProfitSoFar;
+  right++;
+}
+return maxProfitSoFar;
 };
 
 console.log(maxProfit([6, 7, 4, 5, 6, 7, 3, 4, 5, 6, 7, 6, 4]));
+
+*/
