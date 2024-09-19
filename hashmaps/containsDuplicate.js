@@ -72,4 +72,63 @@ dups[num] = true;
 return false
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  */
+
+
+
+function containsDuplicate (array){
+	let countObj = {}
+
+	for(let i = 0; i <array.length; i ++){
+
+	console.log(i)		
+	 if(countObj[array[i]]) return true
+	countObj[array[i]] = true
+	console.log(countObj)
+
+	}
+
+
+return false
+
+}
+
+ nums = [1, 2, 3]
+
+console.log(containsDuplicate(nums))
+
+
+
