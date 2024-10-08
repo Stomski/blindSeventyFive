@@ -29,4 +29,18 @@ t.length == s.length
 s and t consist of any valid ascii character.
 
 
+ok so iterate over the strings, building a hashmap for each string that tracks unique characters and their counts
+if at any point those hashmaps dont equal each other return ffalse, if we get to the end return true
+
+
+but how does that hashmap work?
+
+
 */
+
+let nums = 3
+
+console.log(nums)
+
+
+
