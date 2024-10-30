@@ -34,3 +34,41 @@ Follow up: A linked list can be reversed either iteratively or recursively. Coul
 
 
 */
+
+/*
+so lets firm up the definition of a node,
+
+a node has a val and a next.
+
+node.val
+node.next
+
+
+given a node at the head of a linked list, reverse the list
+
+function reverseLinkedList(head){
+
+assign variables for previeous and next
+perform the shuffle
+save next, reassign next to prev,
+reasign prev to cur,
+reaassign curr to next
+
+return prev
+
+
+*/
+
+function reverseLinkedList(head) {
+  let prev = null;
+  let next = null;
+
+  while (head !== null) {
+    next = head.next;
+    head.next = prev;
+    prev = head;
+    head = next;
+  }
+
+  return prev;
+}

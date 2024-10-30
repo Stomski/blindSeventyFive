@@ -35,7 +35,7 @@ s consists of only uppercase English letters.
 
 
 
-ok so im gonna try to solve this one more time before i look at the solution
+
 
 
 
