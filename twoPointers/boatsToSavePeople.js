@@ -40,14 +40,45 @@ are the weights all integers?
 
 //  formulate the approach:
 
-while the array has length
+ok so while the array has more than 2 people in it,
 
-sliding in looking for the max and tracking closest(with the indices), if max not found, pair closest and remove
+i want to compare the first to each subsequent, tracking a maximum,
+                if i find a pair that matches the limit,
+                        remove them both, increase boat count and continue
+                    else i want to remove the maximum possible pair and increase count (if there is one found below the limit),
+                    if no pairs found below limit, remove people at zero, increase count, continue till array length = 0
+
+
+
 
 */
 
+function boatsToSavePeople(people, limit) {
+  let boatCount = 0;
+  while (people.length >= 1) {
+    if (people.length === 1) {
+      //i want to add one to boat count and break out of the loop, returning count
+    }
+    let currLeft = people[0];
+    let currRight = 1;
+    while (currRight <= people.length) {
+      let maxFound = 0;
+      let maxIndice = 0;
+      if (currLeft + people[currRight] === limit) {
+        //i want to slice them both out, increase boat count
+        // and BREAK out of the loop
+      } else if (currLeft + people[currRight] < limit) {
+        //compare to max, if its greater, adjust max and maxindice, continue with pointer motion
 
+        if (currLeft + people[currRight] > maxFound) {
+        }
+      } else {
+        //if it isnt a valid pair, just continue
+        continue;
+      }
 
-
-
-
+      //and so  this point if max found is zero i pop just the first indice, increase boat count and continue
+    }
+  }
+  return boatCount; // return count
+}
